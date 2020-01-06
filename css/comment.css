@@ -1,0 +1,277 @@
+body {
+  font-family: Microsoft JhengHei;
+}
+.reset-Button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    cursor: pointer;
+    background: transparent;
+    outline:none;
+  
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+.reset-Button:focus{
+    outline: 0;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #727272;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #565656;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background: #565656;
+    }
+
+.justify-content-between {
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.wrap{
+  width: 100%;
+/*   overflow:hidden; */
+}
+.main-image {
+  width: 100%;
+  padding-bottom:11%;
+  background-image: url("../images/title.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0px auto;
+}
+.content{
+  padding-top:5px;
+  background-image: url("../images/map4.png");
+  background-size: corver;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  padding-bottom:5px;
+  box-sizing:border-box;
+  background-attachment: fixed;
+}
+.content-wrap{
+  margin: 0 auto;
+  width: 90%;
+  background-color:rgba(255,255,255,.85);
+  position:relative;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(34, 62, 66, 0.25);
+  padding-top: 42px;
+}
+
+.item-area{
+  cursor: pointer;
+}
+.item-area:hover{
+  background-color: #fffbec;
+  border-radius: 5px;
+}
+.item-area.active{
+  background-color: #fdf7e0;
+  border-radius: 5px;
+}
+.item-area.active .progress{
+  transform:scale(1.05);
+}
+.item-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3498db;
+}
+.tag{
+  font-size:17px;
+  
+  }
+.info-nav{
+  margin: 0 auto;
+  width: 90%;
+}
+.card-wrap{
+  margin: 0 auto;
+  max-width: 750px;
+}
+.star-area{
+  font-size:18px;
+  display:flex;
+  justify-content: space-between;
+}
+.star-area .fa-star{
+  margin-right: 5px;
+}
+.star-area .checked{
+  color: orange;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+@media (max-width: 860px) { 
+  .content{
+    padding-right:20px;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 818px) { 
+  .content{
+    padding-top:250px;
+    padding-bottom:calc(50% - 250px);
+  }
+  .content-wrap{
+    padding-left:10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 518px) { 
+  .content{
+    padding-top:250px;
+    padding-bottom:calc(90% - 250px);
+  }
+}
+
+.btn-marquee {
+   overflow: hidden;
+}
+ .btn-marquee span {
+	 display: block;
+	 padding: 0 20px;
+	 animation: move-left 2s linear infinite;
+}
+ .btn-marquee span::after {
+	 position: absolute;
+/* 	 content: attr(data-text); */
+   font-family: "Font Awesome 5 Free",Microsoft JhengHei;
+   content: attr(data-text)" \f0fe";
+
+   font-weight: normal;
+	 top: 0;
+	 left: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 width: 100%;
+	 height: 100%;
+}
+@keyframes move-left {
+  to {
+    transform: translateX(-100%);
+	}
+}
+
+.rotating-text p .word {
+  display: flex;
+  opacity: 0;
+}
+.rotating-text p .word .letter {
+  transform-origin: center center 25px;
+}
+.rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.rotating-text p .word .letter.in {
+  transition: 0.38s ease;
+}
+.rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+
+/*Pagination*/
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+.pagination > li {
+  display: inline;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.428571429;
+  color: #428bca;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #2a6496;
+  background-color: #eee;
+  border-color: #ddd;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #999;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+#nav {
+	display:table;
+	margin:0 auto;
+}

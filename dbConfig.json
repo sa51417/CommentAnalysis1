@@ -1,0 +1,5 @@
+{
+"dsn":"sqlsrv:server=127.0.0.1,1433;database=CommentDB;",
+"username":"sa",
+"password":"as"
+}
